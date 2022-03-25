@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import useStyles from "../utils/styles";
 import NextLink from "next/link";
-import {AccountCircle} from "@material-ui/icons";
+import {AccountCircle ,ShoppingCart} from "@material-ui/icons";
 const Layout = ({ children }) => {
   const classes = useStyles();
 
@@ -38,11 +38,11 @@ const Layout = ({ children }) => {
                   aria-haspopup="true"
                   color="inherit"
                 >
-                  <AccountCircle fontSize="large" />
+                  <ShoppingCart fontSize="large" />
                 </IconButton>
               </Link>
             </NextLink>
-              <NextLink href="/cart" passHref>
+              <NextLink href="/login" passHref>
               <Link>
                 <IconButton
                   aria-label="account of current user"
