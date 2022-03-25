@@ -58,7 +58,7 @@ const data = {
     {
       name: "Classic Pants",
       category: "Pants",
-      image: "/images/Pants3.jpg",
+      image: "/images/pants3.jpg",
       price: 75,
       brand: "Casely",
       rating: 4.5,
