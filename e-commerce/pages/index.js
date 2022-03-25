@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import NextLink from "next/link"
 import styles from "../styles/Home.module.css";
 import Layout from "../components/Layout";
 import { Card, Grid, CardActionArea, CardMedia, CardContent,Typography, CardActions ,Button} from "@material-ui/core";
@@ -21,19 +22,25 @@ const Home = () => {
               numReviews,
               countInStock,
               description,
+              slug
             }) => (
               <Grid item md={4} key={name}>
+
                 <Card>
-                  <CardActionArea>
+                  <NextLink href={`/product/${slug}`} passHref>
+                     <CardActionArea>
                     <CardMedia component={"img"} image={image} title={name} alt={name}></CardMedia>
                     <CardContent>
                       <Typography>{name}</Typography>
                     </CardContent>
                   </CardActionArea>
+                  </NextLink>
                   <CardActions>
                     <Typography>${price}</Typography>
                     <Button size={"small"} color={"primary"}>Add to cart</Button>
                   </CardActions>
+                
+                 
                 </Card>
               </Grid>
             )
