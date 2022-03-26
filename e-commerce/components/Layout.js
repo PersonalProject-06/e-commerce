@@ -10,14 +10,15 @@ import {
 } from "@material-ui/core";
 import useStyles from "../utils/styles";
 import NextLink from "next/link";
-import {AccountCircle ,ShoppingCart} from "@material-ui/icons";
-const Layout = ({ title,children }) => {
+import { AccountCircle, ShoppingCart } from "@material-ui/icons";
+const Layout = ({ title, children, description }) => {
   const classes = useStyles();
 
   return (
     <div>
       <Head>
-        <title>{title? `${title} | e-commerce` :"e-commerce" }</title>
+        <meta name="description" content={description?description:"soon..."}/>
+        <title>{title ? `${title} | e-commerce` : "e-commerce"}</title>
       </Head>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
@@ -42,7 +43,7 @@ const Layout = ({ title,children }) => {
                 </IconButton>
               </Link>
             </NextLink>
-              <NextLink href="/login" passHref>
+            <NextLink href="/login" passHref>
               <Link>
                 <IconButton
                   aria-label="account of current user"

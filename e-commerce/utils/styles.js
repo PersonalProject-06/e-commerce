@@ -21,6 +21,7 @@ const useStyles = makeStyles({
   main: {
     minHeight: "80vh",
   },
+  center : {display:"flex",alignItems:"center"},
   footer: {
     textAlign: "center",
   },
