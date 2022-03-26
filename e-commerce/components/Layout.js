@@ -11,13 +11,13 @@ import {
 import useStyles from "../utils/styles";
 import NextLink from "next/link";
 import {AccountCircle ,ShoppingCart} from "@material-ui/icons";
-const Layout = ({ children }) => {
+const Layout = ({ title,children }) => {
   const classes = useStyles();
 
   return (
     <div>
       <Head>
-        <title>e-commerce</title>
+        <title>{title? `${title} | e-commerce` :"e-commerce" }</title>
       </Head>
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>

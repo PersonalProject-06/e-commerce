@@ -13,6 +13,11 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     fontSize: "1.5rem",
   },
+  section:{
+    marginTop:10,
+    marginBottom:10
+  }
+  ,
   main: {
     minHeight: "80vh",
   },

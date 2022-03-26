@@ -72,6 +72,7 @@ const data = {
       countInStock: 20,
       description: "A popular Pants",
     },
+    
   ],
 };
 
