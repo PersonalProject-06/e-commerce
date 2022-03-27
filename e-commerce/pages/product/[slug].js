@@ -31,7 +31,7 @@ const Product = () => {
         <div className={classes.section}>
           <NextLink href="/" passHref>
             <Link>
-              <Typography className={classes.center}>
+              <Typography className={classes.center} >
                 <IconButton
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
@@ -58,7 +58,7 @@ const Product = () => {
           <Grid item md={3} xs={12}>
             <List>
               <ListItem>
-                <Typography variant={"h4"}> {product.name}</Typography>
+                <Typography variant={"h1"}> {product.name}</Typography>
               </ListItem>
               <ListItem>
                 <Typography> Category: {product.category}</Typography>
@@ -75,8 +75,8 @@ const Product = () => {
                     value={product.rating}
                     readOnly
                     precision={0.1}
-                  />{" "}
-                  ({product.numReviews} reviews){" "}
+                  />
+                  ({product.numReviews} reviews)
                 </Typography>
               </ListItem>
               <ListItem>
@@ -100,9 +100,9 @@ const Product = () => {
                     </Grid>
                     <Grid item xs={6}>
                       {product.countInStock > 0 ? (
-                        <Typography color={"primary"}>{"In Stock"}</Typography>
+                        <Typography color={"secondary"}>{"In Stock"}</Typography>
                       ) : (
-                        <Typography color={"secondary"}>
+                        <Typography style={{color:"red"}}>
                           {"Unavailable"}
                         </Typography>
                       )}
